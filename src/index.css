@@ -1,0 +1,19 @@
+body {
+  background-image: url('https://firebasestorage.googleapis.com/v0/b/stars-116de.appspot.com/o/images%2Fnebula.jpg?alt=media&token=329b3bd0-1b3e-418e-b9fb-235477718e79');
+  background-size: cover;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+h1, h2, h3, h4, h5, h6,p {
+  color: aliceblue;
+}

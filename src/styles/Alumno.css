@@ -1,0 +1,72 @@
+/* Estilos generales */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilos para el componente Alumno */
+.Alumno {
+  background-color: rgba(0, 0, 0, 0.0); /* Color de fondo adecuado para la imagen */
+  padding: 20px;
+  margin: 20px;
+  margin-top: 10rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.15);
+}
+
+/* Resto de los estilos... */
+
+.TarjetaFoto {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.Foto {
+  width: 200px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.Info {
+  display: flex;
+  flex-direction: column;
+}
+
+.Nombre {
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.Matricula,
+.Escolaridad {
+  margin: 0;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 1);
+}
+
+.Contenido {
+  margin-top: 20px;
+}
+
+.Titulo {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 1);
+}
+
+.Subtitulo {
+  font-size: 24px;
+  font-weight: normal;
+  margin: 10px 0;
+  color: rgba(255, 255, 255, 1);
+}
+
+.Descripcion {
+  font-size: 18px;
+  margin: 0;
+  color: rgba(255, 255, 255, 1);
+}

@@ -1,0 +1,48 @@
+.reactions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 7px;
+  margin-bottom: 6px;
+}
+
+.reaction {
+  width: 48px;
+  height: 48px;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin-top: 4px;
+  margin-right: 8px;
+  margin-bottom: 14px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+}
+
+.reaction:hover {
+  transform: scale(1.2);
+  /* aumentamos el tamaño de la imagen al 110% */
+}
+
+.reaction-like {
+  background-image: url('./images/like.png');
+}
+
+.reaction-love {
+  background-image: url('./images/heart.png');
+}
+
+.reaction-haha {
+  background-image: url('./images/smile.png');
+}
+
+.reaction-wow {
+  background-image: url('./images/wow.png');
+}
+
+.reaction-sad {
+  background-image: url('./images/sad.png');
+}
+
+.reaction-angry {
+  background-image: url('./images/angry.png');
+}

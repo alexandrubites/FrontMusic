@@ -1,0 +1,60 @@
+
+.imagen {
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    justify-items: center;
+    align-items: center;
+  
+    background-image: url("../../public/Wallpaper.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    max-height: fit-content;
+  
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000; 
+    z-index: -1;
+  
+    opacity: 0.90; /* Ajusta la opacidad de la imagen (valor entre 0 y 1) */
+    filter: brightness(80%); /* Ajusta el brillo de la imagen (valor entre 0% y 100%) */
+  }
+  
+
+.Entrada {
+    margin: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    padding: 0;
+}
+
+.Entrada section p {
+    margin-top: 0;
+    font-size: 22px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.Entrada section li {
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 500;
+    font-style: oblique;
+}
+
+.sombra {
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(79, 75, 79, 1);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(79, 75, 79, 1);
+    box-shadow: 0px 5px 15px 0px rgba(79, 75, 79, 1);
+    background-color: var(--blanco);
+    padding: 3rem;
+    border-radius: 2rem;
+}
+
