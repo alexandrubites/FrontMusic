@@ -5,7 +5,7 @@ import axios from 'axios';
 const CommentsComponent = ({ id }) => {
   const [comentarios, setComentarios] = useState([]);
   const [commentText, setCommentText] = useState([]);
-  const uri = "https://api-reactions-comments-service-api-fermindra.cloud.okteto.net/api/comments"
+  const uri = "https://api-service-alexandrubites.cloud.okteto.net/api/comments"
 
   useEffect(() => {
     const fetchComments = async () => {

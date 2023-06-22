@@ -10,33 +10,34 @@ const ReactionsComponent = ({ id }) => {
   const [angryCount, setAngryCount] = useState(0);
   const [sadCount, setSadCount] = useState(0);
   const [wowCount, setWowCount] = useState(0);
-  const uri = "/api/reactions";
+  const uri = "https://api-service-alexandrubites.cloud.okteto.net/api/reactions";
 
   const fetchReactions = useCallback(async () => {
     try {
       const responseLike = await axios.get(`${uri}/${id}/like`);
-      const likeCount = responseLike.data ? responseLike.data.n : 0;
+      const fetchedLikeCount = responseLike.data ? responseLike.data.n : 0;
       const responseLove = await axios.get(`${uri}/${id}/love`);
-      const loveCount = responseLove.data ? responseLove.data.n : 0;
+      const fetchedLoveCount = responseLove.data ? responseLove.data.n : 0;
       const responseAngry = await axios.get(`${uri}/${id}/angry`);
-      const angryCount = responseAngry.data ? responseAngry.data.n : 0;
+      const fetchedAngryCount = responseAngry.data ? responseAngry.data.n : 0;
       const responseWow = await axios.get(`${uri}/${id}/wow`);
-      const wowCount = responseWow.data ? responseWow.data.n : 0;
+      const fetchedWowCount = responseWow.data ? responseWow.data.n : 0;
       const responseHaha = await axios.get(`${uri}/${id}/haha`);
-      const hahaCount = responseHaha.data ? responseHaha.data.n : 0;
+      const fetchedHahaCount = responseHaha.data ? responseHaha.data.n : 0;
       const responseSad = await axios.get(`${uri}/${id}/sad`);
-      const sadCount = responseSad.data ? responseSad.data.n : 0;
+      const fetchedSadCount = responseSad.data ? responseSad.data.n : 0;
 
-      setLikeCount(likeCount);
-      setLoveCount(loveCount);
-      setAngryCount(angryCount);
-      setWowCount(wowCount);
-      setHahaCount(hahaCount);
-      setSadCount(sadCount);
+      setLikeCount(fetchedLikeCount);
+      setLoveCount(fetchedLoveCount);
+      setAngryCount(fetchedAngryCount);
+      setWowCount(fetchedWowCount);
+      setHahaCount(fetchedHahaCount);
+      setSadCount(fetchedSadCount);
+
+      console.log(likeCount)
+
     } catch (error) {
       if (error.response && error.response.status === 404) {
-        // Manejar el caso de recurso no encontrado
-        // Puedes establecer el contador en 0 o mostrar un mensaje de error, por ejemplo
         console.log('El recurso no fue encontrado.');
       } else {
         console.log('Error al obtener las reacciones:', error);
@@ -56,10 +57,9 @@ const ReactionsComponent = ({ id }) => {
       objectId: id,
       reactionId: status
     };
-  
     console.log(JSON.stringify(data));
     KafkaService.reactionPush(data);
-    await fetchReactions(); // Espera a que se complete fetchReactions antes de continuar
+    await fetchReactions();
   };
 
   return (

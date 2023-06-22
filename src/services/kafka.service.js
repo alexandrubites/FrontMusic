@@ -1,7 +1,7 @@
 class KafkaService {
-    url = 'https://producer-reaction-service-alexandrubites.cloud.okteto.net';
+    url = 'https://producer-reaction-service-alexandrubites.cloud.okteto.net/';
 
-    url2 = 'https://producer-comentarios-service-alexandrubites.cloud.okteto.net';
+    url2 = 'https://producer-comentarios-service-alexandrubites.cloud.okteto.net/';
 
    reactionPush = async (data) => {
        await fetch(this.url + 'reaction?userId=' + data.userId + '&objectId=' + data.objectId + '&reactionId=' + data.reactionId  , {
